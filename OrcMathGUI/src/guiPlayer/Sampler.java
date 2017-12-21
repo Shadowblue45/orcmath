@@ -133,7 +133,7 @@ public class Sampler extends GUIApplication implements FileRequester{
 				FileOpenButton fileButton = new FileOpenButton(490, 70, 120, 30, null,Sampler.this);
 				viewObjects.add(fileButton);
 			
-			viewObjects.add(new VideoGames());
+			viewObjects.add(new VideoGames("Jotaro",17));
 		}
 		
 		public void mouseDragged(MouseEvent m) {
