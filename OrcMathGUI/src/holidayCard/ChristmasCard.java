@@ -6,7 +6,7 @@ import guiTeacher.userInterfaces.Screen;
 public class ChristmasCard extends GUIApplication {
 
 	static ChristmasCard card;
-	static Screen front;
+	static Screen outside;
 	static Screen inside;
 	
 	public ChristmasCard(int width, int height) {
@@ -16,9 +16,9 @@ public class ChristmasCard extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-		front = new CatalogScreen(getWidth(),getHeight());
-		inside = new CatalogScreen(getWidth(),getHeight());
-		setScreen(front);
+		outside = new OutsideScreen(getWidth(),getHeight());
+		inside = new InsideScreen(getWidth(),getHeight());
+		setScreen(outside);
 	}
 
 	public static void main(String[] args) {

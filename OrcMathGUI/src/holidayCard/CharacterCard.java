@@ -5,19 +5,15 @@ import java.awt.Graphics2D;
 
 import guiTeacher.components.AnimatedComponent;
 import guiTeacher.components.Component;
+import guiTeacher.components.Graphic;
 
 public class CharacterCard extends AnimatedComponent {
+	private Graphic graphic;
 	
-	private int age;
-	private String name;
-	private double price;
-	private String imgAddress;
-
 	public CharacterCard(int x,int y) {
 		super(x, y, 90, 180);
-		addSequence("resources/disgaea.png", 150, 4, 188, 90, 180, 6);
-		Thread animation = new Thread(this);
-		animation.start();
+		graphic = new Graphic(50, 100, "resources/happy.png");
+		return graphic;
 		update();
 	}
 
@@ -26,9 +22,4 @@ public class CharacterCard extends AnimatedComponent {
 		g.setColor(Color.BLUE);
 		super.update(g);
 	}
-	
-	public String toString() {
-		return name + ", " + age;
-	}
-
 }

@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import guiTeacher.components.Action;
 import guiTeacher.components.Button;
 import guiTeacher.components.FileOpenButton;
+import guiTeacher.components.Graphic;
 import guiTeacher.components.TextArea;
 import guiTeacher.components.TextField;
 import guiTeacher.interfaces.FileRequester;
@@ -15,31 +16,33 @@ import guiTeacher.interfaces.Visible;
 import guiTeacher.userInterfaces.FullFunctionScreen;
 import shadowBlue.VideoGames;
 
-public class CatalogScreen extends FullFunctionScreen implements FileRequester{
+public class OutsideScreen extends FullFunctionScreen implements FileRequester{
 
 	private static final long serialVersionUID = 258186143576427947L;
 	private TextField descriptionField;
 	private TextArea text;
-	private Button addButton;
-	private FileOpenButton openButton;
+	private Button insideButton;
+	private Graphic graphic;
 	
-	public CatalogScreen(int width, int height) {
+	public OutsideScreen(int width, int height) {
 		super(width, height);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void initAllObjects(List<Visible> viewObjects) {
-		addButton = new Button(30,30,100,30,"Add Button",new Action() {
+		graphic = new Graphic(0, 60, "resources/grinch.jpg");
+		insideButton = new Button(30,30,100,30,"Go Inside",new Action() {
 			
 			@Override
 			public void act() {
 				ChristmasCard.card.setScreen(ChristmasCard.inside);
+				
 			}
 		}
 		);
-		viewObjects.add(addButton);
-		viewObjects.add(new CharacterCard(50,50));
+		viewObjects.add(graphic);
+		viewObjects.add(insideButton);
 	}
 
 	public void addClick() {
