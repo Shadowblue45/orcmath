@@ -15,7 +15,7 @@ public class CustomButton extends Button {
 	private Color blue;
 
 	public CustomButton(int x, int y) {
-		super(x, y, 20, 40, text, null);
+		super(x, y, 20, 40, "", null);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -26,7 +26,7 @@ public class CustomButton extends Button {
 		g.setColor(Color.BLUE);
 		g.drawString(s1, 10, 20);
 		g.drawString(s2, 20, 20);
-		g.fill3DRect(10, 10, 10, 20, hover);
+		g.fillRect(10, 10, 10, 20);
 	}
 
 	void updateString1(String string){
