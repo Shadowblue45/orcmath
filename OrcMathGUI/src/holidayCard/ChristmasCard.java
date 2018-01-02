@@ -5,9 +5,9 @@ import guiTeacher.userInterfaces.Screen;
 
 public class ChristmasCard extends GUIApplication {
 
-	static ChristmasCard card;
-	static Screen outside;
-	static Screen inside;
+	public static ChristmasCard card;
+	public static Screen outside;
+	public static Screen inside;
 	
 	public ChristmasCard(int width, int height) {
 		super(width, height);
