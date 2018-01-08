@@ -8,13 +8,12 @@ public class MoveDavid implements MoveInterfaceFahad {
 
 	@Override
 	public ButtonInterfaceFahad getButton() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void getMove(int bIndex) {
-		// TODO Auto-generated method stub
+		return  SimonScreenFahad.button[bIndex];
 		
 	}
 

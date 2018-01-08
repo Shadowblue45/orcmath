@@ -32,7 +32,7 @@ public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 
 	@Override
 	public void setRound(int i) {
-		// TODO Auto-generated method stub
+		SimonScreenFahad.r = i;
 		
 	}
 
