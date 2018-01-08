@@ -6,4 +6,16 @@ public class MoveDavid implements MoveInterfaceFahad {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public ButtonInterfaceFahad getButton() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void getMove(int bIndex) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

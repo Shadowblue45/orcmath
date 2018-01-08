@@ -1,5 +1,6 @@
 package myStuff;
 
+import java.awt.Color;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -11,7 +12,7 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 
 	public ButtonDavid(int x, int y, int w, int h, String text, Action action) {
 		super(x, y, w, h, "", null);
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stubx
 	}
 	public void drawButton(Graphics2D g, boolean hover){
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
@@ -33,6 +34,26 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 			g.drawString(t, (getWidth()-fm.stringWidth(t))/2, 
 					(getHeight()+fm.getHeight()-fm.getDescent())/2);
 		}
+	}
+	@Override
+	public void highlight() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void dim() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setColor(Color color) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void getAButton() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

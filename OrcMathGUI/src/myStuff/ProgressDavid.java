@@ -18,4 +18,28 @@ public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 		
 	}
 
+	@Override
+	public void gameOver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getProgress() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setRound(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setSequenceSize(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
