@@ -6,6 +6,10 @@ import guiTeacher.components.Component;
 
 public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 	
+	private int round;
+	private int sequenceSize;
+	private ProgressInterfaceFahad progress;
+	
 
 	public ProgressDavid(int x, int y, int w, int h) {
 		super(x, y, w, h);
@@ -26,19 +30,19 @@ public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 
 	@Override
 	public void getProgress() {
-		// TODO Auto-generated method stub
+		return;
 		
 	}
 
 	@Override
 	public void setRound(int i) {
-		SimonScreenFahad.r = i;
+		this.round = i;
 		
 	}
 
 	@Override
 	public void setSequenceSize(int i) {
-		// TODO Auto-generated method stub
+		this.sequenceSize = i;
 		
 	}
 

@@ -9,6 +9,8 @@ import guiTeacher.components.Action;
 import guiTeacher.components.Button;
 
 public class ButtonDavid extends Button implements ButtonInterfaceFahad {
+	
+	private Color color;
 
 	public ButtonDavid(int x, int y, int w, int h, String text, Action action) {
 		super(x, y, w, h, "", null);
@@ -47,7 +49,7 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 	}
 	@Override
 	public void setColor(Color color) {
-		// TODO Auto-generated method stub
+		this.color = color;
 		
 	}
 	@Override

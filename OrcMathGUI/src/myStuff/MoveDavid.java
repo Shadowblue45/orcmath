@@ -1,6 +1,7 @@
 package myStuff;
 
 public class MoveDavid implements MoveInterfaceFahad {
+	private ButtonInterfaceFahad b;
 
 	public MoveDavid() {
 		// TODO Auto-generated constructor stub
@@ -8,7 +9,7 @@ public class MoveDavid implements MoveInterfaceFahad {
 
 	@Override
 	public ButtonInterfaceFahad getButton() {
-		return null;
+		return b;
 	}
 
 	@Override
