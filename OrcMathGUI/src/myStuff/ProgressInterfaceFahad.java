@@ -7,5 +7,7 @@ public interface ProgressInterfaceFahad extends Visible {
 	void getProgress();
 	void setRound(int i);
 	void setSequenceSize(int i);
+	void updateSequenceCount(int size);
+	void updateRoundNumber(int roundNumber);
 
 }

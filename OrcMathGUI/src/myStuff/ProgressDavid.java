@@ -47,4 +47,16 @@ public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 		
 	}
 
+	@Override
+	public void updateSequenceCount(int size) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateRoundNumber(int roundNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

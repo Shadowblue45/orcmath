@@ -1,56 +1,68 @@
 package myStuff;
-
 import java.awt.Color;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-
+import java.awt.geom.Ellipse2D;
+import java.awt.image.BufferedImage;
 import guiTeacher.components.Action;
 import guiTeacher.components.Button;
-
 public class ButtonDavid extends Button implements ButtonInterfaceFahad {
+	private Color baseColor;
+	private Color currentColor;
 	
-	private Color color;
-
-	public ButtonDavid(int x, int y, int w, int h, String text, Action action) {
-		super(x, y, w, h, "", null);
-		// TODO Auto-generated constructor stubx
+	public ButtonDavid(int x, int y, int w, int h, String text, Color color, Action action) {
+		super(x, y, w, h, text, color, action);
+		setColor(color);
+		setActiveBorderColor(Color.BLACK);
+		update();
 	}
+	@Override
+	public void highlightButton() {
+		currentColor = Color.pink;
+		update();
+	}
+	@Override
+	public void normalizeButton() {
+		currentColor = baseColor;
+		update();
+	}
+	@Override
+	public void setColor(Color color) {
+		baseColor = color;
+		currentColor = color;
+		update();
+	}
+	@Override
+	public void setX(double x) {
+		setX((int)x);
+	}
+	@Override
+	public void setY(double y) {
+		setY((int)y);
+	}
+	
 	public void drawButton(Graphics2D g, boolean hover){
-		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-				RenderingHints.VALUE_ANTIALIAS_ON);
-		drawShape(g, hover);
-		g.setColor(getForeground());
-		/*g.setFont(getFont());
-		FontMetrics fm = g.getFontMetrics();
-		
-		if(getText()!= null){
-			g.setColor(getForeground());
-			String t = getText();
-			//just in case text is too wide, cut off
-			int cutoff = t.length();
-			while(cutoff > 0 && fm.stringWidth(t) > getWidth()){
-				cutoff --;
-				t = t.substring(0,cutoff); 
-			}
-			g.drawString(t, (getWidth()-fm.stringWidth(t))/2, 
-					(getHeight()+fm.getHeight()-fm.getDescent())/2);
-		}
-		*/
+		Ellipse2D ellipse = new Ellipse2D.Double(0, 0, getWidth(), getHeight());
+		g.setColor(currentColor);
+		g.draw(ellipse);
+		g.fill(ellipse);
+	}
+	public void update() {
+		BufferedImage hoverImage = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+		Graphics2D hoverG = hoverImage.createGraphics();
+		applyStyles(hoverG);
+		drawButton(hoverG, true);
+		super.update();
 	}
 	@Override
 	public void highlight() {
-		setColor(this.color.brighter());
+		// TODO Auto-generated method stub
 		
 	}
 	@Override
 	public void dim() {
-		setColor(this.color.darker());
-		
-	}
-	@Override
-	public void setColor(Color color) {
-		this.color = color;
+		// TODO Auto-generated method stub
 		
 	}
 	@Override
@@ -58,9 +70,5 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 		// TODO Auto-generated method stub
 		
 	}
-
 	
-
-	
-
 }

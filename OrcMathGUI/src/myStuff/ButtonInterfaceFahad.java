@@ -11,5 +11,9 @@ public interface ButtonInterfaceFahad extends Clickable {
 	void highlight();
 	void dim();
 	void getAButton();
+	void normalizeButton();
+	void highlightButton();
+	void setX(double d);
+	void setY(double d);
 
 }
