@@ -39,12 +39,12 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 	}
 	@Override
 	public void highlight() {
-		setColor(Color.RED);
+		setColor(this.color.brighter());
 		
 	}
 	@Override
 	public void dim() {
-		setColor(color);
+		setColor(this.color.darker());
 		
 	}
 	@Override
