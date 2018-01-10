@@ -39,12 +39,12 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 	}
 	@Override
 	public void highlight() {
-		// TODO Auto-generated method stub
+		setColor(Color.RED);
 		
 	}
 	@Override
 	public void dim() {
-		// TODO Auto-generated method stub
+		setColor(color);
 		
 	}
 	@Override
@@ -57,6 +57,8 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 	
 

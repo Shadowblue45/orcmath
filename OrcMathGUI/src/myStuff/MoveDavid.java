@@ -3,8 +3,8 @@ package myStuff;
 public class MoveDavid implements MoveInterfaceFahad {
 	private ButtonInterfaceFahad b;
 
-	public MoveDavid() {
-		// TODO Auto-generated constructor stub
+	public MoveDavid(ButtonInterfaceFahad button) {
+		this.b = button;
 	}
 
 	@Override
@@ -14,7 +14,7 @@ public class MoveDavid implements MoveInterfaceFahad {
 
 	@Override
 	public void getMove(int bIndex) {
-		return  SimonScreenFahad.button[bIndex];
+		
 		
 	}
 

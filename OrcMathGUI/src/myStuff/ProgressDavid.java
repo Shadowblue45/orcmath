@@ -9,6 +9,7 @@ public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 	private int round;
 	private int sequenceSize;
 	private ProgressInterfaceFahad progress;
+	private boolean lose;
 	
 
 	public ProgressDavid(int x, int y, int w, int h) {
@@ -30,7 +31,7 @@ public class ProgressDavid extends Component implements ProgressInterfaceFahad {
 
 	@Override
 	public void getProgress() {
-		return;
+		
 		
 	}
 

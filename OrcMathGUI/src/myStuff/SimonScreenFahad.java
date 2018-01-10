@@ -40,24 +40,17 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 		r++;
 		MoveInterfaceFahad x = randomMove();
 		sequence.add(x);
-		setRound(r);
-		setSequenceSize(sequence.size());
+		p.setRound(r);
+		p.setSequenceSize(sequence.size());
 		changeText("Simon's turn");
 		playSequence();
 		changeText("Your turn");
 		acceptInput = true;
-		setSequenceSize(0);
+		p.setSequenceSize(0);
 		
 	}
-	private void setSequenceSize(int size) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void setRound(int r2) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 	private void playSequence() {
 		 ButtonInterfaceFahad b=null;
@@ -66,7 +59,7 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 			     if(b!=null) {
 			    	 b.dim();
 			     }
-			    b = getButton();
+			    b = sequence.get(i).getButton();
 			    b.highlight();
 			    try {
 					Thread.sleep(sleepTime);
@@ -79,8 +72,9 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 		
 	}
 
+
+
 	private ButtonInterfaceFahad getButton() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -125,13 +119,11 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 
     
 	private MoveInterfaceFahad getMove(int index) {
-		// TODO Auto-generated method stub
-		return null;
+		return new MoveDavid(button[index]);
 	}
 
 	private ProgressInterfaceFahad getProgress() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ProgressDavid(300,300,100,100);
 	}
 
 	private void addButtons() {
@@ -143,7 +135,7 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 			button[i] = b;
 			b.setColor(color[i]); 
 			b.setX(100);
-			b.setY((i+10)*3);
+			b.setY(30+(i*5));
 			b.setAction(new Action(){
 
 				public void act(){
@@ -184,8 +176,7 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 	}
 
 	private ButtonInterfaceFahad getAButton() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ButtonDavid(0,0,30,30,"",null);
 	}
 
 }
