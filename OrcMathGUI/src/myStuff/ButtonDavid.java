@@ -21,7 +21,7 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		drawShape(g, hover);
 		g.setColor(getForeground());
-		g.setFont(getFont());
+		/*g.setFont(getFont());
 		FontMetrics fm = g.getFontMetrics();
 		
 		if(getText()!= null){
@@ -36,6 +36,7 @@ public class ButtonDavid extends Button implements ButtonInterfaceFahad {
 			g.drawString(t, (getWidth()-fm.stringWidth(t))/2, 
 					(getHeight()+fm.getHeight()-fm.getDescent())/2);
 		}
+		*/
 	}
 	@Override
 	public void highlight() {

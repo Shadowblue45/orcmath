@@ -46,7 +46,7 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 		playSequence();
 		changeText("Your turn");
 		acceptInput = true;
-		p.setSequenceSize(0);
+		sequenceIndex = 0;
 		
 	}
 	
@@ -54,7 +54,7 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 
 	private void playSequence() {
 		 ButtonInterfaceFahad b=null;
-		 int sleepTime = (int) (r*.5);
+		 int sleepTime = (int) (r*100);
 		 for(int i=0;i<sequence.size();i++){ 
 			     if(b!=null) {
 			    	 b.dim();
@@ -135,7 +135,7 @@ public class SimonScreenFahad  extends ClickableScreen implements Runnable {
 			button[i] = b;
 			b.setColor(color[i]); 
 			b.setX(100);
-			b.setY(30+(i*5));
+			b.setY(100+(i*10));
 			b.setAction(new Action(){
 
 				public void act(){
